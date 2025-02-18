@@ -17,12 +17,12 @@ const AddContact = ({ onClose }) => {
 
     return (
         <div className="form-container">
-            <h2>Add New Contact</h2>
+            <h2>Añadir nuevo contacto</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <input
                         type="text"
-                        placeholder="Name"
+                        placeholder="Nombre"
                         value={contact.name}
                         onChange={(e) =>
                             setContact({ ...contact, name: e.target.value })
@@ -33,7 +33,7 @@ const AddContact = ({ onClose }) => {
                 <div className="form-group">
                     <input
                         type="tel"
-                        placeholder="Phone"
+                        placeholder="Teléfono"
                         value={contact.phone}
                         onChange={(e) =>
                             setContact({ ...contact, phone: e.target.value })
@@ -54,14 +54,14 @@ const AddContact = ({ onClose }) => {
                 </div>
                 <div className="form-buttons">
                     <button type="submit" className="btn-primary">
-                        Add Contact
+                        Añadir contacto
                     </button>
                     <button
                         type="button"
                         className="btn-secondary"
                         onClick={onClose}
                     >
-                        Cancel
+                        Cancelar
                     </button>
                 </div>
             </form>

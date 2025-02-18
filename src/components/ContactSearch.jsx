@@ -8,10 +8,10 @@ const ContactSearch = () => {
 
     return (
         <div className="contact-search">
-            <h2>Search Contacts</h2>
+            <h2>Buscar Contactos</h2>
             <input
                 type="text"
-                placeholder="Search by name or email"
+                placeholder="Buscar por nombre o por email"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
@@ -22,7 +22,7 @@ const ContactSearch = () => {
                             <p>
                                 <strong>{contact.name}</strong>
                             </p>
-                            <p>Phone: {contact.phone}</p>
+                            <p>Telefono: {contact.phone}</p>
                             <p>Email: {contact.email}</p>
                         </div>
                     ))}

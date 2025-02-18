@@ -17,7 +17,7 @@ const EditContact = ({ contact, onClose }) => {
 
   return (
     <div className="form-container">
-      <h2>Edit Contact</h2>
+      <h2>Editar Contacto</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <input

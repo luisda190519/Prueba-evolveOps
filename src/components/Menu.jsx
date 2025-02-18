@@ -1,10 +1,10 @@
 const Menu = ({ onMenuSelect }) => {
   return (
     <div className="menu">
-      <button onClick={() => onMenuSelect('add')}>Add Contact</button>
-      <button onClick={() => onMenuSelect('list')}>List Contacts</button>
-      <button onClick={() => onMenuSelect('search')}>Search Contact</button>
-      <button onClick={() => onMenuSelect('close')}>Close Address Book</button>
+      <button onClick={() => onMenuSelect('add')}>Añadir Contacto</button>
+      <button onClick={() => onMenuSelect('list')}>Listado de Contactos</button>
+      <button onClick={() => onMenuSelect('search')}>Buscar Contacto</button>
+      <button onClick={() => onMenuSelect('close')}>Cerrar agenda</button>
     </div>
   );
 };
