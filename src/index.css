@@ -1,0 +1,318 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --success-color: #22c55e;
+    --error-color: #ef4444;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+  }
+  
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .app-header {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+  }
+  
+  .app-header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .menu button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .menu button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .app-content {
+    background-color: var(--card-background);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recent-contacts h2 {
+    color: var(--text-primary);
+    margin-bottom: 24px;
+  }
+  
+  .recent-contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .contact-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-info h3 {
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  
+  .contact-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  
+  .contact-email {
+    color: var(--primary-color) !important;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .recent-contacts-loading {
+    text-align: center;
+    color: var(--text-secondary);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .app {
+      padding: 12px;
+    }
+  
+    .menu {
+      flex-direction: column;
+    }
+  
+    .menu button {
+      width: 100%;
+    }
+  
+    .recent-contacts-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-card {
+      padding: 16px;
+    }
+  }
+  
+  /* Add these styles for the other components */
+  .contact-list li {
+    border: 1px solid var(--border-color);
+    margin: 12px 0;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--card-background);
+  }
+  
+  .search-results {
+    margin-top: 20px;
+  }
+  
+  .search-result {
+    border: 1px solid var(--border-color);
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 8px;
+    background-color: var(--card-background);
+  }
+
+
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+  }
+  
+  /* Contact List Styles */
+  .contacts-container {
+    padding: 24px;
+  }
+  
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+  }
+  
+  .contact-card-wrapper {
+    position: relative;
+    transition: transform 0.2s;
+  }
+  
+  .contact-card-wrapper:hover {
+    transform: translateY(-2px);
+  }
+  
+  .contact-card-wrapper:hover .edit-button {
+    opacity: 1;
+  }
+  
+  .edit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+  }
+  
+  .edit-button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .no-contacts {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: 24px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .form-buttons {
+      flex-direction: column;
+    }
+    
+    .form-buttons button {
+      width: 100%;
+    }
+    
+    .contacts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
