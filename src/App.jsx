@@ -49,7 +49,7 @@ const App = () => {
                         <ContactList onEdit={handleEdit} />
                     )}
 
-                    {currentView === "search" && <ContactSearch />}
+                    {currentView === "search" && <ContactSearch onEdit={handleEdit}/>}
 
                     {currentView === "edit" && selectedContact && (
                         <EditContact

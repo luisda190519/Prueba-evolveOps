@@ -261,7 +261,9 @@ input:focus {
     padding: 24px;
 }
 
-.contacts-grid {
+.contacts-grid,
+.recent-contacts-grid,
+.search-results .contacts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
@@ -314,16 +316,22 @@ input:focus {
         width: 100%;
     }
 
-    .contacts-grid {
+    .contacts-grid,
+    .recent-contacts-grid,
+    .search-results .contacts-grid {
         grid-template-columns: 1fr;
     }
     .app.closing {
-      animation: closeBook 0.5s ease-in forwards;
+        animation: closeBook 0.5s ease-in forwards;
     }
-    
+
     .edit-button {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .search-container {
+        padding: 16px;
     }
 }
 
@@ -346,4 +354,39 @@ input:focus {
 .app.closing {
     animation: closeBook 0.5s ease-in forwards;
     pointer-events: none;
+}
+
+.search-container {
+    padding: 24px;
+}
+
+.search-input-container {
+    max-width: 600px;
+    margin: 0 auto 24px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.no-results {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 24px;
+    font-size: 1.1rem;
+}
+
+.search-results {
+    margin-top: 24px;
 }
